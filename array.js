@@ -250,6 +250,38 @@ Ex: minInArray(nums) => 1
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+// function minInArrayW(arr) {
+//     var min = arr[arr.length - 1]
+//     while (arr.length !== 0) {
+//         if (arr[arr.length - 1] <= min) {
+//             min = arr[arr.length - 1]
+//         }
+//         arr.length--
+//     }
+//     return min
+// }
+
+
+function minInArrayW(arr) {
+    while (arr.length !== 1) {
+        if (arr[arr.length - 1] <= arr[arr.length - 2]) {
+            arr[arr.length - 2] = arr[arr.length - 1]
+        }
+        arr.length--
+    }
+    return arr
+}
+
+function minInArrayF(arr) {
+    for (let i = 0; i !== arr.length; i++) {
+        if (arr[i] <= arr[i + 1]) {
+            arr[i + 1] = arr[i]
+        }
+    }
+    return arr[arr.length - 1]
+}
+
+
 
 
 /*
@@ -264,7 +296,34 @@ Ex: minInArray(nums,8) => [1,2,3,9]
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+function removeFromArray(arr, n) {
+    var i = 0
+    while (i <= (arr.length - 1)) {
 
+        if (n === arr[i]) {
+
+            arr.splice(i, 1);
+            i--
+        }
+        i++
+    }
+
+    return arr
+}
+
+
+function removeFromArrayF(arr, n) {
+    for (let i = 0; i < arr.length; i++) {
+
+        if (n === arr[i]) {
+
+            arr.splice(i, 1);
+            i--
+        }
+    }
+
+    return arr
+}
 
 /*
 16
@@ -278,7 +337,33 @@ Ex: oddArray(nums) => [1,3,9]
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+function oddArray(arr) {
+    var i = 0
+    while (i <= (arr.length - 1)) {
 
+        if (arr[i] % 2 === 0) {
+
+            arr.splice(i, 1);
+            i--
+        }
+        i++
+    }
+
+    return arr
+}
+
+
+function oddArrayf(arr) {
+    for (let i = 0; i < arr.length; i++) {
+
+        if (arr[i] % 2 === 0) {
+            arr.splice(i, 1);
+            i--
+        }
+    }
+
+    return arr
+}
 
 /*
 17
@@ -297,11 +382,40 @@ Ex: aveArray(nums) => 16.6
 */
 
 
+function aveArray(arr) {
+    var i = 0
+    while (i <= (arr.length - 1)) {
+
+        if (arr[i] % 2 === 1) {
+
+            arr.splice(i, 1);
+            i--
+        }
+        i++
+    }
+
+    return arr
+}
+
+
+function aveArrayf(arr) {
+    for (let i = 0; i < arr.length; i++) {
+
+        if (arr[i] % 2 === 1) {
+            arr.splice(i, 1);
+            i--
+        }
+    }
+
+    return arr
+}
+
+
 /*
 18
 Create a function called shorterInArray
 that accept an array of strings
-and return the shortest string inside this array (first)
+and  returnthe shortest string inside this array (first)
 
 var strings= ["alex","mercer","madrasa","rashed2","emad","hala"]
 Ex: shorterInArray(strings) => "alex"
@@ -310,7 +424,29 @@ Ex: shorterInArray(strings) => "alex"
 **try more cases by your self
 */
 
+function shorterInArray(arr) {
+    var min = arr[0]
+    var i = 0
+    while (arr.length !== i) {
+        if (arr[i].length <= min.length) {
+            min = arr[i]
+        }
+        i++
+    }
+    return min
+}
 
+
+
+function shorterInArrayf(arr) {
+    var min = arr[0]
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].length <= min.length) {
+            min = arr[i]
+        }
+    }
+    return min
+}
 /*
 19
 Create a function called repeatChar
