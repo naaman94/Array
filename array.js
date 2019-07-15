@@ -5,11 +5,11 @@ console.log('Here is : ', 'array')
 /*
 1
 Correct the syntax error
- [ 1,7  9  45, ]
+ [ 1,7 , 9 , 45, ]
 
- ["Str" "alex","moh"
+ ["Str","alex","moh",
 
- 'the','fox' 'over' lazy, 'dog',  ]
+ 'the','fox' ,'over', 'lazy', 'dog'  ]
 
 */
 
@@ -18,7 +18,7 @@ Correct the syntax error
 2
 What the index of "Banana","Tomato"
 var fruits=["Tomato","Banana","Watermelon"]
-
+// banana = 1 and tomato =0
 */
 
 
@@ -29,7 +29,9 @@ Create an array represents your:
 2- Favorite Sport (3)
 3- Favorite Movie (4)
 */
-
+var arrFood = ["mansaf", "mlu5ia", "ma8loba", "dawali", "dolma"]
+var arrSport = ["football", "running", "hiking"]
+var arrMovie = ["dontBreath", "wonder", "IT", "gone girls"]
 
 /*
 4
@@ -41,6 +43,9 @@ Ex: firstOfArray([1,4,5]) => 1
 Ex: firstOfArray(["t","u","g","x"]) => "t"
 */
 
+function firstOfArray(arr) {
+    return arr[0]
+}
 
 /*
 5
@@ -51,7 +56,9 @@ and return the first element in an array
 Ex: lastOfArray([1,4,5]) => 5
 Ex: lastOfArray(["t","u","g","x"]) => "x"
 */
-
+function lastOfArray(arr) {
+    return arr[arr.length - 1]
+}
 
 /*
 6
@@ -60,8 +67,18 @@ Using console make this array to be like this one (push, unshift, shift, pop)
 var array = [0,5,7,9]
 => [1,3,4,6,8,9,10]
 */
-
-
+var arr = [0, 5, 7, 9]
+console.log(arr)
+arr.shift()
+arr.shift()
+arr.shift()
+arr.unshift(8)
+arr.unshift(6)
+arr.unshift(4)
+arr.unshift(3)
+arr.unshift(1)
+arr.push(10)
+console.log(arr)
 /*
 7
 Using the console try to figure out what the thing thats (push, unshift, shift, pop) return to you
