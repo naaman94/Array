@@ -84,6 +84,8 @@ console.log(arr)
 Using the console try to figure out what the thing thats (push, unshift, shift, pop) return to you
 
 var array2 = [5,9,-7,3.5]
+
+done
 */
 
 
@@ -97,7 +99,19 @@ and return the two middle elemnt in an array if it is have an even elemnets
 Ex: middleOfArray([1,4,5]) => 4
 Ex: middleOfArray(["t","u","g","x"]) =>"u and g"
 */
+function middleOfArray(arr) {
+    var t
+    if (arr.length % 2 === 0) {
 
+        t = arr[((arr.length / 2) - 1)] + " and " + arr[(arr.length / 2)]
+        return t
+    }
+    else {
+
+        t = arr[(((arr.length - 1) / 2))]
+        return t
+    }
+}
 
 /*
 9
@@ -111,7 +125,23 @@ animals; => ['zebra', 'elephant']
 var nums= [1,2,3,8,9]
 nums => [5,-22,3.5,44,98,44]
 */
+var animals = ['cat', 'ele', 'bird']
+console.log(animals)
+animals[0] = 'zebra'
+animals[1] = 'elephant'
+animals.length = 2
+console.log(animals)
 
+var nums = [1, 2, 3, 8, 9]
+console.log(nums)
+
+nums[0] = 5
+nums[1] = +22
+nums[2] = 3.5
+nums[3] = 44
+nums[4] = 98
+nums[5] = 44
+console.log(nums)
 
 /*
 10
@@ -126,7 +156,10 @@ Ex: indexOfArray(nums,4) => 9
 
 **try more cases by your self
 */
+function indexOfArray(arr, n) {
 
+    return arr[n]
+}
 
 /*
 11
@@ -139,7 +172,11 @@ Ex: arrayExceptLast(nums) =>  [1,2,3,8]
 
 **try more cases by your self
 */
+function arrayExceptLast(arr) {
+    arr.length = arr.length - 1
+    return arr
 
+}
 
 /*
 12
@@ -152,7 +189,12 @@ Ex: addToEnd(nums,55) =>  [1,2,3,8,55]
 
 **try more cases by your self
 */
+function addToEnd(arr, val) {
 
+    arr[arr.length - 1] = val
+
+    return arr
+}
 
 // all the exercises below should solved 2 times: 1- for loop 2- while lopp
 /*
@@ -167,6 +209,33 @@ Ex: sumArray(nums) => 23
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+function sumArrayw(arr) {
+    var sum = 0;
+
+    while (arr.length !== 0) {
+        sum += arr[(arr.length - 1)]
+
+        arr.length--
+    }
+    return sum
+}
+
+
+
+
+function sumArrayf(arr) {
+    var sum = 0;
+
+
+
+    for (let i = 0; i !== arr.length; i++) {
+        sum += arr[i]
+
+    }
+
+    return sum
+}
+
 
 
 /*
